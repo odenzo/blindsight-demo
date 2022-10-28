@@ -1,0 +1,6 @@
+/.idea/
+target/
+/.env
+/modules/domains/target/
+/.bsp/sbt.json
+/**/*.semanticdb

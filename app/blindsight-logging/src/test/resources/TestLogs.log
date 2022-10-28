@@ -1,0 +1,64 @@
+2022-09-28T14:18:09.356+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=31261105-1cf9-47b8-9902-3ba6a0a7bfbc,,200 OK
+2022-09-28T14:18:09.345+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=cad3b3c1-d5b5-49fe-a23a-4b1cf9f1352b,,200 OK
+2022-09-28T14:18:09.412+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=f24945cb-6184-48af-8e5d-48638f872ede,,200 OK
+2022-09-28T14:18:09.355+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=6aacf74c-0beb-4bea-b481-d85e77fca2a2,,200 OK
+8:13.330+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-OLT3-34,,404 Not Found
+2022-09-28T14:18:13.333+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-OLT4-33,,200 OK
+2022-09-28T14:18:13.349+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-OLT4-34,,404 Not Found
+2022-09-28T14:18:13.353+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=f28d5ac4-4bc7-4da5-b3ca-bd94b52ac91e,,200 OK
+2022-09-28T14:18:13.345+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:create,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT3-34", "interface-type": "gpon", "number-of-lower-layer-interfaces": 0, "profile-vector-name": "OLT_Leaf_GPON_Interface_Vector"}}},200 OK
+2022-09-28T14:18:13.358+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:create,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT4-34", "interface-type": "gpon", "number-of-lower-layer-interfaces": 0, "profile-vector-name": "OLT_Leaf_GPON_Interface_Vector"}}},200 OK
+2022-09-28T14:18:13.392+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=042eb7be-1adc-4101-a152-5a5eb2d1104a,,200 OK
+
+2022-09-28T14:18:13.414+0000,{"message":"Anonymous access not authorized"},10.160.34.135,GET,/api/restconf/data/adtran-cloud-platform-devices:devices/device=BAALSJ-OLT13-29-3/inspect/status,,401 Unauthorized
+2022-09-28T14:18:13.417+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=503ff4f9-4aae-44d4-91b0-d60ffa9bb08f,,200 OK
+2022-09-28T14:18:13.418+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=d155f583-933a-431d-a6ff-ff53397e3f2b,,200 OK
+2022-09-28T14:18:13.408+0000,adtgtcjrob,10.52.198.210,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow-jobs:run-job-now-with-parameters,{"input":{"job-name":"Toggle Test","blocking":false,"context":[{"name":"Interface Name","type":"interface","hint":"The name of the Interface to execute the toggle test on","value":"BAAMTD-OLT13-15"},{"name":"Duration","type":"string","hint":"Duration of the Toggle test in seconds","value":"300"},{"name":"Test Port State","type":"list","subtype":["up","down","toggle"],"hint":"State of the port during the test. Using 'toggle' will change a currently up port to down or a currently down port to up independent of administrative state","value":"down"}]}},200 OK
+2022-09-28T14:18:13.583+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=a2353a48-378a-49ae-9c73-14169175a675,,200 OK
+2022-09-28T14:18:14.287+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=503ff4f9-4aae-44d4-91b0-d60ffa9bb08f,,200 OK
+2022-09-28T14:18:14.181+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:create,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT5-34", "interface-type": "gpon", "number-of-lower-layer-interfaces": 0, "profile-vector-name": "OLT_Leaf_GPON_Interface_Vector"}}},200 OK
+2022-09-28T14:18:14.287+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=d155f583-933a-431d-a6ff-ff53397e3f2b,,200 OK
+2022-09-28T14:18:15.365+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=b2c9092e-6e4e-4b7f-8084-2a0c8b0bdd44,,200 OK
+2022-09-28T14:18:05.360+0000,adtgtcjrob,10.52.198.212,GET,/api/restconf/data/adtran-cloud-platform-devices:devices/device=BAAKSP-OLT1-2-11/inspect,,500 Internal Server Error
+2022-09-28T14:18:15.472+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=f28d5ac4-4bc7-4da5-b3ca-bd94b52ac91e,,200 OK
+2022-09-28T14:18:15.515+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=fa2aa6aa-ac5c-4cd9-b8a5-8e2af3aa6e2c,,200 OK
+2022-09-28T14:18:15.519+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=d8eb1fd3-f447-4192-8f66-1467e8c3f50d,,200 OK
+2022-09-28T14:18:15.520+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=f24945cb-6184-48af-8e5d-48638f872ede,,200 OK
+2022-09-28T14:18:15.525+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=042eb7be-1adc-4101-a152-5a5eb2d1104a,,200 OK
+2022-09-28T14:18:15.527+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=5102ab63-734c-4782-b847-0272d129a786,,200 OK
+2022-09-28T14:18:15.535+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-CP1-9,,200 OK
+2022-09-28T14:18:15.536+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-OLT1-34,,200 OK
+2022-09-28T14:18:15.547+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-CP1-10,,404 Not Found
+2022-09-28T14:18:15.548+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-interfaces:interfaces/interface=BAAMZT-OLT1-35,,404 Not Found
+2022-09-28T14:18:15.557+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:create,{"input": {"interface-context":
+ {"interface-name": "BAAMZT-CP1-10", "interface-type": "ethernet", "number-of-lower-layer-interfaces": 0, "profile-vector-name":
+  "CP_10G_Ethernet_Interface_Vector"}}},200 OK
+2022-09-28T14:18:15.558+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:create,{"input": {"interface-context":
+{"interface-name": "BAAMZT-OLT1-35", "interface-type": "gpon", "number-of-lower-layer-interfaces": 0,
+ "profile-vector-name": "OLT_Leaf_GPON_Interface_Vector"}}},200 OK
+2022-09-28T14:18:15.586+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=b7be77b0-2a03-4c19-9df7-2b01cebdf30d,,200 OK
+2022-09-28T14:18:14.132+0000,singhg74_154,10.160.66.135,POST,/api/restconf/operations/adtran-cloud-platform-event-workflow:get-event-summary,{"input":{"summary-field":"severity","exact-match":true,"source":"BAALUK-OLT18","context":"device"}},200 OK
+2022-09-28T14:18:14.138+0000,singhg74_154,10.160.66.135,POST,/api/restconf/operations/adtran-cloud-platform-event-workflow:get-events,{"input":{"summary-field":"severity","current":true,"cursor":0,"result-size":25,"exact-match":true,"source":"BAALUK-OLT18","context":"device"}},200 OK
+2022-09-28T14:18:19.013+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=79f59e6d-832a-4b0b-a763-dda25f616052,,200 OK
+2022-09-28T14:18:23.188+0000,{"message":"Anonymous access not authorized"},10.160.34.135,GET,/api/restconf/data/adtran-cloud-platform-devices:devices/device=BAALWA-OLT6-41-2/inspect/status,,401 Unauthorized
+2022-09-28T14:18:23.177+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=2014d5c7-bfd0-42a1-882e-b7c6d6ade01d,,200 OK
+22-09-28T14:18:40.635+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:deploy,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT7-36", "interface-id": "gpon 0/36", "device-name": "BAAMZT-OLT7", "lower-layer-interfaces": [], "bundle-name": "BAAMZT-OLT7-36", "overridden-profiles": {"profile": [{"name": "Disabled PON Interface Profile", "type": "pon-port-profile-type"}]}, "object-parameters": {"pon-id": "375407A4000000"}}}},200 OK
+2022-09-28T14:18:40.648+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:deploy,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT1-37", "interface-id": "gpon 0/37", "device-name": "BAAMZT-OLT1", "lower-layer-interfaces": [], "bundle-name": "BAAMZT-OLT1-37", "overridden-profiles": {"profile": [{"name": "Disabled PON Interface Profile", "type": "pon-port-profile-type"}]}, "object-parameters": {"pon-id": "375401A5000000"}}}},200 OK
+2022-09-28T14:18:40.831+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=bb50c979-f26a-4e58-befb-9198fe051f9b,,200 OK
+2022-09-28T14:18:40.873+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=d3db03fa-b2c0-431d-89d1-aa3e93d71c83,,200 OK
+2022-09-28T14:18:40.831+0000,reillyj3_adt,192.168.1.250,POST,/api/restconf/operations/adtran-cloud-platform-uiworkflow:deploy,{"input": {"interface-context": {"interface-name": "BAAMZT-OLT5-36", "interface-id": "gpon 0/36", "device-name": "BAAMZT-OLT5", "lower-layer-interfaces": [], "bundle-name": "BAAMZT-OLT5-36", "overridden-profiles": {"profile": [{"name": "Disabled PON Interface Profile",
+ "type": "pon-port-profile-type"}]},
+ "object-parameters": {"pon-id": "375405A4000000"}}}},
+ 200 OK
+
+
+2022-09-28T14:18:41.040+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=4e816f5b-95a5-4c7c-b0a8-fab0e16acbd5,,200 OK
+2022-09-28T14:18:37.802+0000,dalzelr_154,10.160.66.135,POST,/api/restconf/operations/adtran-cloud-platform-search:search,{"input":{"type":"search-global","related-objects-term":{"search-term":"BAALSH-OLT1-3-1","object-type":"interface","search-field":"subtended-device-names","cursor":0,"result-size":100,"exact-match":true}}},200 OK
+2022-09-28T14:18:41.217+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=e20ef0df-04d9-4089-878c-812fda8ad12b,,200 OK
+2022-09-28T14:18:37.819+0000,dalzelr_154,10.160.66.135,GET,/api/restconf/data/adtran-cloud-platform-devices:devices/device=BAALSH-OLT1-3-1/inspect/status,,200 OK
+2022-09-28T14:18:41.302+0000,reillyj3_adt,192.168.1.250,GET,/api/restconf/data/adtran-cloud-platform-uiworkflow:transitions/transition=4e816f5b-95a5-4c7c-b0a8-fab0e16acbd5,,200 OK
+2022-09-28T14:18:37.946+0000,kerrls3_154,10.160.34.135,POST,/api/restconf/operations/adtran-cloud-platform-search:search,{"input":
+{"type":"search-global",
+"global-search-terms":{"search-term":"MC_OGEA79165306","cursor":0,"result-size":25}
+}
+},200 OK

@@ -1,0 +1,186 @@
+<configuration scan="false" monitorInterval="60" packagingData="false" debug="false">
+
+	<property name="blindsight.source.enabled" value="true"/>
+	<property name="jsonfile.prettyprint" value="true"/>
+
+<!--	<newRule pattern="*/sigar" actionClass="com.tersesystems.logback.sigar.SigarAction"/>-->
+
+
+
+<!--	<conversionRule conversionWord="cpu" converterClass="com.tersesystems.logback.sigar.CPUPercentageConverter"/>-->
+<!--	<conversionRule conversionWord="mem" converterClass="com.tersesystems.logback.sigar.MemoryPercentageConverter"/>-->
+<!--	<conversionRule conversionWord="loadavg" converterClass="com.tersesystems.logback.sigar.LoadAverageConverter"/>-->
+
+	<!-- give the async appenders time to shutdown (milliseconds) -->
+	<shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook">
+		<delay>100</delay>
+	</shutdownHook>
+
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%-5relative %-5level %logger{35} %M:%line - %msg%n</pattern>
+			</encoder>
+		</appender>
+
+
+
+<!--	<appender name="LOGSTASH" class='ch.qos.logback.core.ConsoleAppender'>-->
+<!--		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">-->
+<!--			<jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>-->
+
+<!--			<timezone>UTC</timezone>-->
+<!--			<timestampPattern>[ISO_INSTANT]</timestampPattern>-->
+<!--			<providers>-->
+<!--				<timestamp>-->
+<!--					<timestampPattern>[ISO_INSTANT]</timestampPattern>-->
+<!--					<timezone>UTC</timezone>-->
+<!--				</timestamp>-->
+<!--				<mdc/>-->
+<!--				<tags/>-->
+<!--				<contextName />-->
+<!--				<context />-->
+<!--				<threadName />-->
+<!--				<sequence />-->
+<!--				<arguments>-->
+<!--						<fieldName>args</fieldName>-->
+<!--						<includeNonStructuredArguments>true</includeNonStructuredArguments>-->
+<!--				</arguments>-->
+<!--				<loggerName />-->
+<!--				<logLevel />-->
+<!--				<logstashMarkers/>-->
+
+<!--				<message>-->
+<!--					<fieldName>prov_msg</fieldName>-->
+<!--				</message>-->
+<!--				<nestedField>-->
+<!--					<fieldName>misc</fieldName>-->
+<!--					<providers>-->
+<!--						<logLevelValue />-->
+<!--					</providers>-->
+<!--				</nestedField>-->
+
+<!--&lt;!&ndash;				<callerData />&ndash;&gt;-->
+<!--				<pattern>-->
+<!--&lt;!&ndash;					<omitEmptyFields>true</omitEmptyFields>&ndash;&gt;-->
+<!--					<pattern>-->
+<!--						{-->
+<!--&lt;!&ndash;						"cpu": "%cpu",&ndash;&gt;-->
+<!--&lt;!&ndash;						"mem": "%mem",&ndash;&gt;-->
+<!--						"app": "logparser",-->
+
+<!--						"relative": "#asLong{%relative}",-->
+<!--						"json_msg" : "#asJson{%message}"-->
+<!--						}-->
+<!--					</pattern>-->
+<!--				</pattern>-->
+<!--				<stackTrace>-->
+<!--					<throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">-->
+<!--						<maxDepthPerThrowable>30</maxDepthPerThrowable>-->
+<!--						<maxLength>2048</maxLength>-->
+<!--						<shortenedClassNameLength>20</shortenedClassNameLength>-->
+<!--						<exclude>^sun\.reflect\..*\.invoke</exclude>-->
+<!--						<exclude>^net\.sf\.cglib\.proxy\.MethodProxy\.invoke</exclude>-->
+<!--&lt;!&ndash;						<evaluator class="myorg.MyCustomEvaluator"/>&ndash;&gt;-->
+<!--						<rootCauseFirst>true</rootCauseFirst>-->
+<!--					</throwableConverter>-->
+<!--				</stackTrace>-->
+<!--			</providers>-->
+<!--		</encoder>-->
+<!--	</appender>-->
+
+<!--	<appender name="ASYNC_JSONFILE" class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender">-->
+<!--		<filter class="com.tersesystems.logback.core.EnabledFilter">-->
+<!--			<enabled>true</enabled>-->
+<!--		</filter>-->
+<!--		<appender class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--			<file>logs/application.json</file>-->
+<!--			<append>true</append>-->
+
+
+<!--			<immediateFlush>true</immediateFlush>-->
+
+<!--			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--				<fileNamePattern> "logs/application.json.%d{yyyy-MM-dd}"</fileNamePattern>-->
+<!--				<maxHistory>5</maxHistory>-->
+<!--			</rollingPolicy>-->
+
+<!--			<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">-->
+<!--				<providers>-->
+<!--					<pattern>-->
+<!--						<pattern>-->
+<!--							{-->
+<!--							"id": "%uniqueId",-->
+<!--							"start_ms": "#asLong{%startTime}"-->
+<!--							}-->
+<!--						</pattern>-->
+<!--					</pattern>-->
+<!--					<sequence/>-->
+<!--					<timestamp>-->
+<!--						<timeZone>UTC</timeZone>-->
+<!--						<pattern> "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"</pattern>-->
+<!--					</timestamp>-->
+<!--					<version/>-->
+<!--					<message/>-->
+<!--					<loggerName/>-->
+<!--					<threadName/>-->
+<!--					<logLevel/>-->
+<!--					<logLevelValue/>-->
+<!--					<stackHash/>-->
+<!--					<mdc/>-->
+<!--					<logstashMarkers/>-->
+<!--					<arguments/>-->
+<!--					<provider class="com.tersesystems.logback.exceptionmapping.json.ExceptionArgumentsProvider">-->
+<!--						<fieldName>exception</fieldName>-->
+<!--					</provider>-->
+
+<!--					<stackTrace>-->
+<!--						<throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">-->
+<!--							<rootCauseFirst>true</rootCauseFirst>-->
+<!--							<inlineHash>true</inlineHash>-->
+<!--						</throwableConverter>-->
+<!--					</stackTrace>-->
+<!--				</providers>-->
+
+<!--				&lt;!&ndash; https://github.com/logstash/logstash-logback-encoder/tree/logstash-logback-encoder-5.2#customizing-json-factory-and-generator &ndash;&gt;-->
+<!--				&lt;!&ndash; XXX it would be much nicer to use OGNL rather than Janino, but out of scope... &ndash;&gt;-->
+<!--				<if condition='p("jsonfile.prettyprint").contains("true")'>-->
+<!--					<then>-->
+<!--						<jsonGeneratorDecorator-->
+<!--								class="com.tersesystems.logback.censor.CensoringPrettyPrintingJsonGeneratorDecorator">-->
+<!--							<censor-ref ref="json-censor"/>-->
+<!--						</jsonGeneratorDecorator>-->
+<!--					</then>-->
+<!--					<else>-->
+<!--						<jsonGeneratorDecorator class="com.tersesystems.logback.censor.CensoringJsonGeneratorDecorator">-->
+<!--							<censor-ref ref="json-censor"/>-->
+<!--						</jsonGeneratorDecorator>-->
+<!--					</else>-->
+<!--				</if>-->
+<!--			</encoder>-->
+<!--		</appender>-->
+<!--	</appender>-->
+
+
+	<!--	SERVICE_NAME=my-favorite-service-->
+
+<!--	HONEYCOMB_METRICS_DATASET=my-metrics-->
+<!--	<appender name="HONEYCOMB" class="com.tersesystems.logback.honeycomb.HoneycombAppender">-->
+<!--		<apiKey>${HONEYCOMB_API_KEY}</apiKey>-->
+<!--		<dataSet>${HONEYCOMB_DATASET}</dataSet>-->
+<!--	</appender>-->
+
+	<logger name="ch.qos.logback" level="WARN"/>
+
+
+	<logger name="com.adtran" level="DEBUG"/>
+	<logger name= "com.adtran.utilapp.logparser.aaa.pipelines" level="INFO"/>
+	<logger name="com.adtran.utilapp.logparser.aaa.CommandLineMain" level="INFO"/>
+	<logger name="com.adtran.utilapp.logparser.aaa.CleanMain" level="INFO"/>
+	<logger name="com.adtran.utilapp.logparser.aaa.GunzipFiles" level="DEBUG"/>
+
+	<root level="DEBUG">
+		<appender-ref ref="CONSOLE"/>
+
+	</root>
+</configuration>
