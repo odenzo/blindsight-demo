@@ -1,30 +1,13 @@
-# Scala 3 Parsers
+# Blindsight Logging Demo
 
-## AAA-Accounting Log Parser
-Parses aaa-accounting to get all the external API calls.
-Has some re-usable parsing bits (Cats-Parse)
+Blindsight is an API on top of logback, for full functionality
+logstash-logback is used.
 
-Main runner: com.adtran.utilapp.logparser.aaa.CommandLineMain
+Blindsight and Terse Logback funky configuration.
 
-Might as well set it up for Scala CLI style usage (shell scripting)
-
-sbt command:
-logparser/run -h
-
-
-logparser/run clean <inDir> <outDir>
-
-Where inDir has a bunch of logfiles (maybe gzipped). Will unzip them, parse them and crete results.json and errors.json in outdir.
-
-
-logparser/run stats <inDir>
-inDir is where the results.json are, will read this file and create some stats (how many calls to each uiworkflow now)
-
-
-
-## Yang Parser/Model Generator
-
-Tried, and going to abandon and use some of the Java opensource stuff as base.
-
-Idea is to spit out case classes, like an OpenAPI thing basically, but delegate to Json
-when some items are too complicated etc.
+Demonstrate;
++ Structured Logging (JSON Objects)
++ Conditional
++ RingBuffer
++ Maybe Sigar (required native lib so not idea)
++ Various types of logging (Fluent, plain etc)
